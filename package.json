@@ -1,0 +1,8 @@
+{
+  "name": "mattermost-typescript",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/cometkim/mattermost-typescript.git",
+  "author": "Hyeseong Kim <cometkim.kr@gmail.com>",
+  "license": "MIT"
+}
