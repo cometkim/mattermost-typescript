@@ -9,17 +9,21 @@
   "scripts": {
     "build": "yarn build:types && yarn build:js",
     "build:js": "babel src -d lib --extensions '.ts' --ignore src/@types",
-    "build:types": "tsc --emitDeclarationOnly",
-    "babel": "babel"
+    "build:types": "tsc --emitDeclarationOnly"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
     "@babel/core": "7.2.2",
+    "@babel/plugin-proposal-class-properties": "7.2.3",
     "@babel/preset-env": "7.2.3",
     "@babel/preset-typescript": "7.1.0",
+    "@types/axios": "0.14.0",
     "babel-plugin-module-resolver": "3.1.2",
     "core-js": "2.6.2",
     "tslint": "5.12.1",
     "typescript": "3.2.4"
+  },
+  "dependencies": {
+    "axios": "0.18.0"
   }
 }
