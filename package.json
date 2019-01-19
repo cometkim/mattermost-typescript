@@ -2,11 +2,15 @@
   "name": "mattermost-typescript",
   "version": "0.0.1",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "repository": "https://github.com/cometkim/mattermost-typescript.git",
   "author": "Hyeseong Kim <cometkim.kr@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "yarn build:types && yarn build:js",
+    "build:js": "babel src -d lib --extensions '.ts' --ignore src/@types",
+    "build:types": "tsc --emitDeclarationOnly",
+    "babel": "babel"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
@@ -14,6 +18,7 @@
     "@babel/preset-env": "7.2.3",
     "@babel/preset-typescript": "7.1.0",
     "babel-plugin-module-resolver": "3.1.2",
+    "core-js": "2.6.2",
     "tslint": "5.12.1",
     "typescript": "3.2.4"
   }
