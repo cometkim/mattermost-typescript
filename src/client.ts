@@ -16,10 +16,8 @@ export default class Client {
 
     public async login(username: string, password: string) {
         try {
-            const res = await this.instance.post('/users/login', { username, password })
-            const { token } = res.headers
-            this.token = token
-            this.instance.defaults.headers.common.Authorization = token
+            const { headers } = await this.instance.post('/users/login', { username, password })
+            this.setToken(headers.Token)
         } catch (error) {
             this.onError(error)
         }
