@@ -1,0 +1,9 @@
+node_modules/
+src/
+yarn.lock
+.gitignore
+
+*.config.js
+*.json
+
+*.log

@@ -1,6 +1,6 @@
 {
   "name": "mattermost-typescript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "repository": "https://github.com/cometkim/mattermost-typescript.git",
@@ -9,7 +9,8 @@
   "scripts": {
     "build": "yarn build:types && yarn build:js",
     "build:js": "babel src -d lib --extensions '.ts' --ignore src/@types",
-    "build:types": "tsc --emitDeclarationOnly"
+    "build:types": "tsc --emitDeclarationOnly",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
